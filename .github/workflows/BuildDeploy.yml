@@ -1,0 +1,17 @@
+name: Call Workflow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  docker:
+    uses: rcardososilva/workflow_call/.github/workflows/buildPushDocker.yml@master
+    with:
+      image_name: image-workflow
+      tag: $GITHUB_RUN_NUMBER
+
+    secrets:
+      registry_username: ${{secrets.REGISTRY_USERNAME}}
+      registry_password: ${{secrets.REGISTRY_PASSWORD}}  
