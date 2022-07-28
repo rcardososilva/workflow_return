@@ -22,7 +22,7 @@ jobs:
     uses: rcardososilva/workflow_call/.github/workflows/buildPushDocker.yml@master
     with:
       image_name: image-workflow
-      tag: $GITHUB_RUN_NUMBER
+      tag: latest
 
     secrets:
       registry_username: ${{secrets.REGISTRY_USERNAME}}
