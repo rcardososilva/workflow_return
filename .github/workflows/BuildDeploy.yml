@@ -7,7 +7,7 @@ on:
 
 jobs:
   validate:
-    - uses: rcardososilva/workflow_call/.github/workflows/validate.yml@master
+    uses: rcardososilva/workflow_call/.github/workflows/validate.yml@master
     with:
       image_name: image-workflow
       tag: $GITHUB_RUN_NUMBER
